@@ -174,6 +174,7 @@ const handleUploadImage = (files: File[]) => {
 }
 // 上传封面
 const handleUploadCover = (event: any) => {
+  
   const file = event.target.files[0];
   if (file) {
     put(file.name, file, { access: 'public', token: import.meta.env.VITE_BLOB_READ_WRITE_TOKEN })
